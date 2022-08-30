@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#2D7EBC"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/lines"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/container1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/back"
+                android:layout_gravity="center"
+                android:tint="@color/white"
+                tools:ignore="UseAppTint"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="BMI"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:paddingRight="30dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="0"
+            android:src="@drawable/setting"
+            android:layout_gravity="center"
+            android:tint="@color/white"
+            tools:ignore="UseAppTint" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="sans-serif"
+            android:includeFontPadding="false"
+            android:text="Body Mass Index"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_name"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_edittext"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtWeight"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:background="@drawable/textlines"
+                android:ems="15"
+                android:hint="Trọng lượng(kg)"
+                android:paddingLeft="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/custom"
+                android:textColorHint="#4b90be"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtHeight"
+                android:layout_width="320dp"
+                android:layout_height="48dp"
+                android:background="@drawable/textlines"
+                android:ems="15"
+                android:hint="Chiều cao(m)"
+                android:paddingLeft="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/custom"
+                android:textColorHint="#4b90be"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/caculate_btn"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/input"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/round_btn"
+            android:text="Tính BMI"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/caculate_btn"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kết quả:"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/edtResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:editable="false"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/result"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Đánh giá"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginLeft="4dp"
+                android:editable="false"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>
